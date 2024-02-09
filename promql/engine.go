@@ -37,16 +37,16 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/timestamp"
-	"github.com/prometheus/prometheus/model/value"
-	"github.com/prometheus/prometheus/promql/parser"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/util/annotations"
-	"github.com/prometheus/prometheus/util/stats"
-	"github.com/prometheus/prometheus/util/zeropool"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/timestamp"
+	"github.com/go-follow/prometheus/model/value"
+	"github.com/go-follow/prometheus/promql/parser"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/util/annotations"
+	"github.com/go-follow/prometheus/util/stats"
+	"github.com/go-follow/prometheus/util/zeropool"
 )
 
 const (
@@ -192,7 +192,7 @@ type QueryOrigin struct{}
 
 // Statement implements the Query interface.
 // Calling this after Exec may result in panic,
-// see https://github.com/prometheus/prometheus/issues/8949.
+// see https://github.com/go-follow/prometheus/issues/8949.
 func (q *query) Statement() parser.Statement {
 	return q.stmt
 }
@@ -1842,7 +1842,7 @@ func (ev *evaluator) rangeEvalTimestampFunctionOverVectorSelector(vs *parser.Vec
 		if vs.Timestamp != nil {
 			// This is a special case for "timestamp()" when the @ modifier is used, to ensure that
 			// we return a point for each time step in this case.
-			// See https://github.com/prometheus/prometheus/issues/8433.
+			// See https://github.com/go-follow/prometheus/issues/8433.
 			vs.Offset = time.Duration(enh.Ts-*vs.Timestamp) * time.Millisecond
 		}
 

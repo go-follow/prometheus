@@ -24,7 +24,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/histogram"
 )
 
 // Example of a span layout and resulting bucket indices (_idx_ is used in this

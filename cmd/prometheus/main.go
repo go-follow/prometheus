@@ -52,30 +52,31 @@ import (
 	"k8s.io/klog"
 	klogv2 "k8s.io/klog/v2"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/legacymanager"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/metadata"
-	"github.com/prometheus/prometheus/model/relabel"
-	"github.com/prometheus/prometheus/notifier"
-	_ "github.com/prometheus/prometheus/plugins" // Register plugins.
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/rules"
-	"github.com/prometheus/prometheus/scrape"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/storage/remote"
-	"github.com/prometheus/prometheus/tracing"
-	"github.com/prometheus/prometheus/tsdb"
-	"github.com/prometheus/prometheus/tsdb/agent"
-	"github.com/prometheus/prometheus/tsdb/wlog"
-	"github.com/prometheus/prometheus/util/documentcli"
-	"github.com/prometheus/prometheus/util/logging"
-	prom_runtime "github.com/prometheus/prometheus/util/runtime"
-	"github.com/prometheus/prometheus/web"
+	"github.com/go-follow/prometheus/rules"
+	"github.com/go-follow/prometheus/scrape"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/storage/remote"
+	"github.com/go-follow/prometheus/tracing"
+	"github.com/go-follow/prometheus/tsdb"
+	"github.com/go-follow/prometheus/tsdb/agent"
+	"github.com/go-follow/prometheus/tsdb/wlog"
+	"github.com/go-follow/prometheus/util/documentcli"
+	"github.com/go-follow/prometheus/util/logging"
+	prom_runtime "github.com/go-follow/prometheus/util/runtime"
+	"github.com/go-follow/prometheus/web"
+
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/legacymanager"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/metadata"
+	"github.com/go-follow/prometheus/model/relabel"
+	"github.com/go-follow/prometheus/notifier"
+	_ "github.com/go-follow/prometheus/plugins" // Register plugins.
+	"github.com/go-follow/prometheus/promql"
 )
 
 var (
@@ -391,10 +392,10 @@ func main() {
 	serverOnlyFlag(a, "rules.alert.resend-delay", "Minimum amount of time to wait before resending an alert to Alertmanager.").
 		Default("1m").SetValue(&cfg.resendDelay)
 
-	a.Flag("scrape.adjust-timestamps", "Adjust scrape timestamps by up to `scrape.timestamp-tolerance` to align them to the intended schedule. See https://github.com/prometheus/prometheus/issues/7846 for more context. Experimental. This flag will be removed in a future release.").
+	a.Flag("scrape.adjust-timestamps", "Adjust scrape timestamps by up to `scrape.timestamp-tolerance` to align them to the intended schedule. See https://github.com/go-follow/prometheus/issues/7846 for more context. Experimental. This flag will be removed in a future release.").
 		Hidden().Default("true").BoolVar(&scrape.AlignScrapeTimestamps)
 
-	a.Flag("scrape.timestamp-tolerance", "Timestamp tolerance. See https://github.com/prometheus/prometheus/issues/7846 for more context. Experimental. This flag will be removed in a future release.").
+	a.Flag("scrape.timestamp-tolerance", "Timestamp tolerance. See https://github.com/go-follow/prometheus/issues/7846 for more context. Experimental. This flag will be removed in a future release.").
 		Hidden().Default("2ms").DurationVar(&scrape.ScrapeTimestampTolerance)
 
 	serverOnlyFlag(a, "alertmanager.notification-queue-capacity", "The capacity of the queue for pending Alertmanager notifications.").

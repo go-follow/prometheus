@@ -24,10 +24,10 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/prompb"
-	"github.com/prometheus/prometheus/storage"
-	otlptranslator "github.com/prometheus/prometheus/storage/remote/otlptranslator/prometheusremotewrite"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/prompb"
+	"github.com/go-follow/prometheus/storage"
+	otlptranslator "github.com/go-follow/prometheus/storage/remote/otlptranslator/prometheusremotewrite"
 )
 
 type writeHandler struct {

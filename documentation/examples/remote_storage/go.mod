@@ -1,4 +1,4 @@
-module github.com/prometheus/prometheus/documentation/examples/remote_storage
+module github.com/go-follow/prometheus/documentation/examples/remote_storage
 
 go 1.18
 
@@ -10,7 +10,7 @@ require (
 	github.com/influxdata/influxdb v1.11.2
 	github.com/prometheus/client_golang v1.17.0
 	github.com/prometheus/common v0.44.0
-	github.com/prometheus/prometheus v0.47.2
+	github.com/go-follow/prometheus v0.47.2
 	github.com/stretchr/testify v1.8.4
 )
 

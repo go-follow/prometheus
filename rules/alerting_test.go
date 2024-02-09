@@ -23,14 +23,14 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/relabel"
-	"github.com/prometheus/prometheus/model/timestamp"
-	"github.com/prometheus/prometheus/notifier"
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/promql/parser"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/util/teststorage"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/relabel"
+	"github.com/go-follow/prometheus/model/timestamp"
+	"github.com/go-follow/prometheus/notifier"
+	"github.com/go-follow/prometheus/promql"
+	"github.com/go-follow/prometheus/promql/parser"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/util/teststorage"
 )
 
 var testEngine = promql.NewEngine(promql.EngineOpts{
@@ -670,7 +670,7 @@ func TestQueryForStateSeries(t *testing.T) {
 	}
 }
 
-// TestSendAlertsDontAffectActiveAlerts tests a fix for https://github.com/prometheus/prometheus/issues/11424.
+// TestSendAlertsDontAffectActiveAlerts tests a fix for https://github.com/go-follow/prometheus/issues/11424.
 func TestSendAlertsDontAffectActiveAlerts(t *testing.T) {
 	rule := NewAlertingRule(
 		"TestRule",

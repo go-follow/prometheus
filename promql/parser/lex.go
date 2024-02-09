@@ -20,7 +20,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/prometheus/prometheus/promql/parser/posrange"
+	"github.com/go-follow/prometheus/promql/parser/posrange"
 )
 
 // Item represents a token or text string returned from the scanner.
@@ -974,7 +974,7 @@ func isAlphaNumeric(r rune) bool {
 
 // isDigit reports whether r is a digit. Note: we cannot use unicode.IsDigit()
 // instead because that also classifies non-Latin digits as digits. See
-// https://github.com/prometheus/prometheus/issues/939.
+// https://github.com/go-follow/prometheus/issues/939.
 func isDigit(r rune) bool {
 	return '0' <= r && r <= '9'
 }
