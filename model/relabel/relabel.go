@@ -22,7 +22,7 @@ import (
 	"github.com/grafana/regexp"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/labels"
 )
 
 var (
@@ -131,7 +131,7 @@ func (c *Config) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	}
 
 	if c.Action == DropEqual || c.Action == KeepEqual {
-		if c.Regex != DefaultRelabelConfig.Regex ||
+		if c.Regex.String() != DefaultRelabelConfig.Regex.String() ||
 			c.Modulus != DefaultRelabelConfig.Modulus ||
 			c.Separator != DefaultRelabelConfig.Separator ||
 			c.Replacement != DefaultRelabelConfig.Replacement {
