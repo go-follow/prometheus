@@ -1,4 +1,4 @@
-module github.com/prometheus/prometheus
+module github.com/go-follow/prometheus
 
 go 1.20
 
