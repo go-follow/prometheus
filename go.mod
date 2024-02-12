@@ -189,12 +189,16 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-require github.com/prometheus/prometheus v0.0.0-00010101000000-000000000000
+require github.com/prometheus/prometheus v0.49.2
 
-require github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
+require (
+	github.com/moby/term v0.5.0 // indirect
+	github.com/morikuni/aec v1.0.0 // indirect
+	gotest.tools/v3 v3.5.1 // indirect
+)
 
 replace (
-	github.com/prometheus/prometheus => github.com/go-follow/prometheus v0.49.2-0.20240212115916-bd2b94d72e39
+	github.com/prometheus/prometheus => github.com/go-follow/prometheus v0.49.2
 	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.3.0
 	k8s.io/klog/v2 => github.com/simonpasquier/klog-gokit/v3 v3.3.0
 )
