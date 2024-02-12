@@ -36,16 +36,16 @@ import (
 	"golang.org/x/exp/slices"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/prometheus/tsdb/errors"
-	"github.com/prometheus/prometheus/tsdb/fileutil"
-	_ "github.com/prometheus/prometheus/tsdb/goversion" // Load the package into main to make sure minium Go version is met.
-	"github.com/prometheus/prometheus/tsdb/tsdbutil"
-	"github.com/prometheus/prometheus/tsdb/wlog"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	tsdb_errors "github.com/go-follow/prometheus/tsdb/errors"
+	"github.com/go-follow/prometheus/tsdb/fileutil"
+	_ "github.com/go-follow/prometheus/tsdb/goversion" // Load the package into main to make sure minium Go version is met.
+	"github.com/go-follow/prometheus/tsdb/tsdbutil"
+	"github.com/go-follow/prometheus/tsdb/wlog"
 )
 
 const (

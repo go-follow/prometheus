@@ -7,14 +7,14 @@ examples and guides.</p>
 
 <div align="center">
 
-[![CI](https://github.com/prometheus/prometheus/actions/workflows/ci.yml/badge.svg)](https://github.com/prometheus/prometheus/actions/workflows/ci.yml)
-[![Docker Repository on Quay](https://quay.io/repository/prometheus/prometheus/status)][quay]
+[![CI](https://github.com/go-follow/prometheus/actions/workflows/ci.yml/badge.svg)](https://github.com/go-follow/prometheus/actions/workflows/ci.yml)
+[![Docker Repository on Quay](https://quay.io/repository/go-follow/prometheus/status)][quay]
 [![Docker Pulls](https://img.shields.io/docker/pulls/prom/prometheus.svg?maxAge=604800)][hub]
 [![Go Report Card](https://goreportcard.com/badge/github.com/prometheus/prometheus)](https://goreportcard.com/report/github.com/prometheus/prometheus)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/486/badge)](https://bestpractices.coreinfrastructure.org/projects/486)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/prometheus/prometheus)
 [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/prometheus.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:prometheus)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/prometheus/prometheus/badge)](https://api.securityscorecards.dev/projects/github.com/prometheus/prometheus)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/go-follow/prometheus/badge)](https://api.securityscorecards.dev/projects/github.com/prometheus/prometheus)
 
 </div>
 
@@ -81,7 +81,7 @@ You can use the `go` tool to build and install the `prometheus`
 and `promtool` binaries into your `GOPATH`:
 
 ```bash
-GO111MODULE=on go install github.com/prometheus/prometheus/cmd/...
+GO111MODULE=on go install github.com/go-follow/prometheus/cmd/...
 prometheus --config.file=your_config.yml
 ```
 
@@ -91,7 +91,7 @@ read its web assets from local filesystem directories under `web/ui/static` and
 from the root of the cloned repository. Note also that these directories do not include the
 React UI unless it has been built explicitly using `make assets` or `make build`.
 
-An example of the above configuration file can be found [here.](https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus.yml)
+An example of the above configuration file can be found [here.](https://github.com/go-follow/prometheus/blob/main/documentation/examples/prometheus.yml)
 
 You can also build using `make build`, which will compile in the web assets so that
 Prometheus can be run from anywhere:
@@ -144,7 +144,7 @@ make common-docker-amd64
 ### Remote Write
 
 We are publishing our Remote Write protobuf independently at
-[buf.build](https://buf.build/prometheus/prometheus/assets).
+[buf.build](https://buf.build/go-follow/prometheus/assets).
 
 You can use that as a library:
 
@@ -181,11 +181,11 @@ For more information on building, running, and developing on the React-based UI,
 
 ## Contributing
 
-Refer to [CONTRIBUTING.md](https://github.com/prometheus/prometheus/blob/main/CONTRIBUTING.md)
+Refer to [CONTRIBUTING.md](https://github.com/go-follow/prometheus/blob/main/CONTRIBUTING.md)
 
 ## License
 
-Apache License 2.0, see [LICENSE](https://github.com/prometheus/prometheus/blob/main/LICENSE).
+Apache License 2.0, see [LICENSE](https://github.com/go-follow/prometheus/blob/main/LICENSE).
 
 [hub]: https://hub.docker.com/r/prom/prometheus/
 [quay]: https://quay.io/repository/prometheus/prometheus

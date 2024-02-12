@@ -48,7 +48,7 @@ import (
 	"math"
 	"math/bits"
 
-	"github.com/prometheus/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/histogram"
 )
 
 const (

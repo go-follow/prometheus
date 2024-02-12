@@ -22,8 +22,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/util/testutil"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/util/testutil"
 )
 
 var (

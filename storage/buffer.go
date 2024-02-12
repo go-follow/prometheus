@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
 )
 
 // BufferedSeriesIterator wraps an iterator with a look-back buffer.

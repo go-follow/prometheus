@@ -30,7 +30,7 @@ require (
 	github.com/grafana/regexp v0.0.0-20221122212121-6b5c0a4cb7fd
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/hashicorp/consul/api v1.26.1
-	github.com/hashicorp/nomad/api v0.0.0-20230721134942-515895c7690c // Not upgrading this for now due to https://github.com/prometheus/prometheus/pull/13255#issuecomment-1845237409
+	github.com/hashicorp/nomad/api v0.0.0-20230721134942-515895c7690c // Not upgrading this for now due to https://github.com/go-follow/prometheus/pull/13255#issuecomment-1845237409
 	github.com/hetznercloud/hcloud-go/v2 v2.4.0
 	github.com/ionos-cloud/sdk-go/v6 v6.1.10
 	github.com/json-iterator/go v1.1.12
@@ -189,7 +189,6 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-require github.com/prometheus/prometheus v0.49.2
 
 require (
 	github.com/moby/term v0.5.0 // indirect
@@ -198,7 +197,6 @@ require (
 )
 
 replace (
-	github.com/prometheus/prometheus => github.com/go-follow/prometheus v0.49.2
 	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.3.0
 	k8s.io/klog/v2 => github.com/simonpasquier/klog-gokit/v3 v3.3.0
 )

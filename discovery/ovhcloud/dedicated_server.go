@@ -26,8 +26,8 @@ import (
 	"github.com/ovh/go-ovh/ovh"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/discovery/refresh"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/discovery/refresh"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
 )
 
 const (

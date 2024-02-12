@@ -152,3 +152,6 @@ update-all-go-deps:
 		$(GO) get -d $$m; \
 	done
 	@cd ./documentation/examples/remote_storage/ && $(GO) mod tidy
+
+lint:
+	golangci-lint run -v --timeout=1m ./...

@@ -20,7 +20,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/prometheus/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/labels"
 )
 
 func TestRelabel(t *testing.T) {
@@ -397,7 +397,7 @@ func TestRelabel(t *testing.T) {
 				"foo":              "bar",
 			}),
 		},
-		{ // From https://github.com/prometheus/prometheus/issues/12283
+		{ // From https://github.com/go-follow/prometheus/issues/12283
 			input: labels.FromMap(map[string]string{
 				"__meta_kubernetes_pod_container_port_name":         "foo",
 				"__meta_kubernetes_pod_annotation_XXX_metrics_port": "9091",

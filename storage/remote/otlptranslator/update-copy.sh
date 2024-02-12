@@ -12,5 +12,5 @@ cp -r ./tmp/pkg/translator/prometheus/*.go ./prometheus
 rm -rf ./prometheus/*_test.go
 rm -rf ./tmp
 
-sed -i '' 's#github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/prometheus#github.com/prometheus/prometheus/storage/remote/otlptranslator/prometheus#g' ./prometheusremotewrite/*.go
+sed -i '' 's#github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/prometheus#github.com/go-follow/prometheus/storage/remote/otlptranslator/prometheus#g' ./prometheusremotewrite/*.go
 sed -i '' '1s#^#// DO NOT EDIT. COPIED AS-IS. SEE README.md\n\n#g' ./prometheusremotewrite/*.go

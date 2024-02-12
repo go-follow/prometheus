@@ -23,7 +23,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
 )
 
 func testUpdateServices(respHandler http.HandlerFunc) ([]*targetgroup.Group, error) {

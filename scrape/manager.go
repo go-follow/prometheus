@@ -27,12 +27,12 @@ import (
 	config_util "github.com/prometheus/common/config"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/util/osutil"
-	"github.com/prometheus/prometheus/util/pool"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/util/osutil"
+	"github.com/go-follow/prometheus/util/pool"
 )
 
 // NewManager is the Manager constructor.

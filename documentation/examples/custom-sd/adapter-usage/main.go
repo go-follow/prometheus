@@ -30,9 +30,9 @@ import (
 	"github.com/go-kit/log/level"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/documentation/examples/custom-sd/adapter"
-	"github.com/prometheus/prometheus/util/strutil"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/documentation/examples/custom-sd/adapter"
+	"github.com/go-follow/prometheus/util/strutil"
 )
 
 var (
