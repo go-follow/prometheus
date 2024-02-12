@@ -26,10 +26,10 @@ import (
 
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/value"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/value"
 )
 
 type openMetricsLexer struct {
@@ -213,7 +213,7 @@ func (p *OpenMetricsParser) Exemplar(e *exemplar.Exemplar) bool {
 }
 
 // CreatedTimestamp returns nil as it's not implemented yet.
-// TODO(bwplotka): https://github.com/prometheus/prometheus/issues/12980
+// TODO(bwplotka): https://github.com/go-follow/prometheus/issues/12980
 func (p *OpenMetricsParser) CreatedTimestamp() *int64 {
 	return nil
 }

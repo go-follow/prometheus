@@ -27,13 +27,13 @@ import (
 	"github.com/golang/snappy"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/prompb"
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/tsdbutil"
-	"github.com/prometheus/prometheus/util/teststorage"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/prompb"
+	"github.com/go-follow/prometheus/promql"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/tsdbutil"
+	"github.com/go-follow/prometheus/util/teststorage"
 )
 
 func TestSampledReadEndpoint(t *testing.T) {

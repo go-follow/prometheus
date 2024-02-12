@@ -93,7 +93,7 @@ Maintaining the release branches for older minor releases happens on a best effo
 A few days before a major or minor release, consider updating the dependencies.
 
 Note that we use [Dependabot](.github/dependabot.yml) to continuously update most things automatically. Therefore, most dependencies should be up to date.
-Check the [dependencies GitHub label](https://github.com/prometheus/prometheus/labels/dependencies) to see if there are any pending updates.
+Check the [dependencies GitHub label](https://github.com/go-follow/prometheus/labels/dependencies) to see if there are any pending updates.
 
 This bot currently does not manage `+incompatible` and `v0.0.0` in the version specifier for Go modules.
 
@@ -110,7 +110,7 @@ This is also a good time to consider any experimental features and feature
 flags for promotion to stable or for deprecation or ultimately removal. Do any
 of these in pull requests, one per feature.
 
-> NOTE: As a validation step check if all security alerts are closed after this step: https://github.com/prometheus/prometheus/security/dependabot. Sometimes it's ok
+> NOTE: As a validation step check if all security alerts are closed after this step: https://github.com/go-follow/prometheus/security/dependabot. Sometimes it's ok
 > if not critical and e.g. fix is not released yet (or it does not relate to 
 > upgrading) or when we are unaffected.
  

@@ -30,13 +30,13 @@ import (
 	prom_testutil "github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	"github.com/prometheus/prometheus/tsdb/fileutil"
-	"github.com/prometheus/prometheus/tsdb/wlog"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	"github.com/go-follow/prometheus/tsdb/fileutil"
+	"github.com/go-follow/prometheus/tsdb/wlog"
 )
 
 // In Prometheus 2.1.0 we had a bug where the meta.json version was falsely bumped

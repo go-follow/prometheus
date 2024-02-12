@@ -33,15 +33,15 @@ import (
 	"github.com/go-kit/log"
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/promql/parser"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/prometheus/tsdb/errors"
-	"github.com/prometheus/prometheus/tsdb/fileutil"
-	"github.com/prometheus/prometheus/tsdb/index"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/promql/parser"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	tsdb_errors "github.com/go-follow/prometheus/tsdb/errors"
+	"github.com/go-follow/prometheus/tsdb/fileutil"
+	"github.com/go-follow/prometheus/tsdb/index"
 )
 
 const timeDelta = 30000

@@ -28,11 +28,11 @@ import (
 	"github.com/go-kit/log/level"
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/prometheus/tsdb/errors"
-	"github.com/prometheus/prometheus/tsdb/fileutil"
-	"github.com/prometheus/prometheus/tsdb/record"
-	"github.com/prometheus/prometheus/tsdb/tombstones"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	tsdb_errors "github.com/go-follow/prometheus/tsdb/errors"
+	"github.com/go-follow/prometheus/tsdb/fileutil"
+	"github.com/go-follow/prometheus/tsdb/record"
+	"github.com/go-follow/prometheus/tsdb/tombstones"
 )
 
 // CheckpointStats returns stats about a created checkpoint.

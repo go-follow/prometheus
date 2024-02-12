@@ -34,12 +34,12 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"gopkg.in/yaml.v2"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/relabel"
-	"github.com/prometheus/prometheus/util/runutil"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/relabel"
+	"github.com/go-follow/prometheus/util/runutil"
 )
 
 func TestPopulateLabels(t *testing.T) {

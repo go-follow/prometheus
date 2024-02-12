@@ -20,7 +20,7 @@ import (
 
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/storage/remote"
+	"github.com/go-follow/prometheus/storage/remote"
 )
 
 func main() {

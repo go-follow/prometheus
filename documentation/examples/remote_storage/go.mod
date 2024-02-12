@@ -1,4 +1,4 @@
-module github.com/prometheus/prometheus/documentation/examples/remote_storage
+module github.com/go-follow/prometheus/documentation/examples/remote_storage
 
 go 1.20
 

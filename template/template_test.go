@@ -23,8 +23,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/promql"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/promql"
 )
 
 func TestTemplateExpansion(t *testing.T) {

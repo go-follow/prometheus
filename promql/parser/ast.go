@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/storage"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/storage"
 
-	"github.com/prometheus/prometheus/promql/parser/posrange"
+	"github.com/go-follow/prometheus/promql/parser/posrange"
 )
 
 // Node is a generic interface for all nodes in an AST.

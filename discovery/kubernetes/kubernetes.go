@@ -23,7 +23,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/prometheus/prometheus/util/strutil"
+	"github.com/go-follow/prometheus/util/strutil"
 
 	disv1beta1 "k8s.io/api/discovery/v1beta1"
 
@@ -51,8 +51,8 @@ import (
 	// Required to get the GCP auth provider working.
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
 )
 
 const (

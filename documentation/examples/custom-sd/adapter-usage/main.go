@@ -31,10 +31,10 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/model"
 
-	prom_discovery "github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/documentation/examples/custom-sd/adapter"
-	"github.com/prometheus/prometheus/util/strutil"
+	prom_discovery "github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/documentation/examples/custom-sd/adapter"
+	"github.com/go-follow/prometheus/util/strutil"
 )
 
 var (

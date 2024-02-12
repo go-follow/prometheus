@@ -24,11 +24,11 @@ import (
 	"github.com/go-kit/log"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/scrape"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/scrape"
 )
 
 type sdCheckResult struct {

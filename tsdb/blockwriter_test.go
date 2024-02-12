@@ -22,8 +22,8 @@ import (
 	"github.com/go-kit/log"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/tsdb/chunks"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/tsdb/chunks"
 )
 
 func TestBlockWriter(t *testing.T) {

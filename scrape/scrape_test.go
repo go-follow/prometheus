@@ -38,20 +38,20 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/relabel"
-	"github.com/prometheus/prometheus/model/textparse"
-	"github.com/prometheus/prometheus/model/timestamp"
-	"github.com/prometheus/prometheus/model/value"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/util/pool"
-	"github.com/prometheus/prometheus/util/teststorage"
-	"github.com/prometheus/prometheus/util/testutil"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/relabel"
+	"github.com/go-follow/prometheus/model/textparse"
+	"github.com/go-follow/prometheus/model/timestamp"
+	"github.com/go-follow/prometheus/model/value"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/util/pool"
+	"github.com/go-follow/prometheus/util/teststorage"
+	"github.com/go-follow/prometheus/util/testutil"
 )
 
 func TestMain(m *testing.M) {
@@ -1197,7 +1197,7 @@ func TestScrapeLoopCache(t *testing.T) {
 
 	ctx, cancel := context.WithCancel(context.Background())
 	// Decreasing the scrape interval could make the test fail, as multiple scrapes might be initiated at identical millisecond timestamps.
-	// See https://github.com/prometheus/prometheus/issues/12727.
+	// See https://github.com/go-follow/prometheus/issues/12727.
 	sl := newBasicScrapeLoop(t, ctx, scraper, app, 100*time.Millisecond)
 
 	numScrapes := 0

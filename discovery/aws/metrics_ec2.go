@@ -14,7 +14,7 @@
 package aws
 
 import (
-	"github.com/prometheus/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery"
 )
 
 type ec2Metrics struct {

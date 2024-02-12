@@ -20,7 +20,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/util/testutil"
+	"github.com/go-follow/prometheus/util/testutil"
 )
 
 func TestLocking(t *testing.T) {

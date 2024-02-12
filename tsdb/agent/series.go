@@ -16,9 +16,9 @@ package agent
 import (
 	"sync"
 
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/tsdb/chunks"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/tsdb/chunks"
 )
 
 // memSeries is a chunkless version of tsdb.memSeries.

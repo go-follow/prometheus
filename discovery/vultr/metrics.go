@@ -14,7 +14,7 @@
 package vultr
 
 import (
-	"github.com/prometheus/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery"
 )
 
 var _ discovery.DiscovererMetrics = (*vultrMetrics)(nil)

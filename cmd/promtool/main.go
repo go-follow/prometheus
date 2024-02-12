@@ -47,19 +47,19 @@ import (
 	promconfig "github.com/prometheus/common/config"
 	"github.com/prometheus/common/expfmt"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/discovery"
-	"github.com/prometheus/prometheus/discovery/file"
-	"github.com/prometheus/prometheus/discovery/kubernetes"
-	"github.com/prometheus/prometheus/discovery/targetgroup"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/rulefmt"
-	"github.com/prometheus/prometheus/notifier"
-	_ "github.com/prometheus/prometheus/plugins" // Register plugins.
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/promql/parser"
-	"github.com/prometheus/prometheus/scrape"
-	"github.com/prometheus/prometheus/util/documentcli"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/discovery"
+	"github.com/go-follow/prometheus/discovery/file"
+	"github.com/go-follow/prometheus/discovery/kubernetes"
+	"github.com/go-follow/prometheus/discovery/targetgroup"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/rulefmt"
+	"github.com/go-follow/prometheus/notifier"
+	_ "github.com/go-follow/prometheus/plugins" // Register plugins.
+	"github.com/go-follow/prometheus/promql"
+	"github.com/go-follow/prometheus/promql/parser"
+	"github.com/go-follow/prometheus/scrape"
+	"github.com/go-follow/prometheus/util/documentcli"
 )
 
 const (
