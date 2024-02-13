@@ -138,3 +138,6 @@ bench_tsdb: $(PROMU)
 cli-documentation:
 	$(GO) run ./cmd/prometheus/ --write-documentation > docs/command-line/prometheus.md
 	$(GO) run ./cmd/promtool/ write-documentation > docs/command-line/promtool.md
+
+lint:
+	golangci-lint run -v --timeout=1m ./...

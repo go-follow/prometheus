@@ -30,16 +30,16 @@ import (
 	"go.uber.org/goleak"
 	"gopkg.in/yaml.v2"
 
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/rulefmt"
-	"github.com/prometheus/prometheus/model/timestamp"
-	"github.com/prometheus/prometheus/model/value"
-	"github.com/prometheus/prometheus/promql"
-	"github.com/prometheus/prometheus/promql/parser"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/tsdbutil"
-	"github.com/prometheus/prometheus/util/teststorage"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/rulefmt"
+	"github.com/go-follow/prometheus/model/timestamp"
+	"github.com/go-follow/prometheus/model/value"
+	"github.com/go-follow/prometheus/promql"
+	"github.com/go-follow/prometheus/promql/parser"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/tsdbutil"
+	"github.com/go-follow/prometheus/util/teststorage"
 )
 
 func TestMain(m *testing.M) {

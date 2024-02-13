@@ -24,10 +24,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/prometheus/prometheus/model/exemplar"
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/model/value"
+	"github.com/go-follow/prometheus/model/exemplar"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/model/value"
 )
 
 type openMetricsLexer struct {

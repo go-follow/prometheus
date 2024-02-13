@@ -24,12 +24,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/config"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/prompb"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/util/annotations"
-	"github.com/prometheus/prometheus/util/gate"
+	"github.com/go-follow/prometheus/config"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/prompb"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/util/annotations"
+	"github.com/go-follow/prometheus/util/gate"
 )
 
 type readHandler struct {

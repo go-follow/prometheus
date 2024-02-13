@@ -22,7 +22,7 @@ import (
 	"github.com/go-kit/log/level"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/prometheus/scrape"
+	"github.com/go-follow/prometheus/scrape"
 )
 
 // MetadataAppender is an interface used by the Metadata Watcher to send metadata, It is read from the scrape manager, on to somewhere else.

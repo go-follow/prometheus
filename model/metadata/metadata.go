@@ -13,7 +13,7 @@
 
 package metadata
 
-import "github.com/prometheus/prometheus/model/textparse"
+import "github.com/go-follow/prometheus/model/textparse"
 
 // Metadata stores a series' metadata information.
 type Metadata struct {

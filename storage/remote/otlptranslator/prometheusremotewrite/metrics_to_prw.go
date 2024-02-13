@@ -3,18 +3,19 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package prometheusremotewrite // import "github.com/prometheus/prometheus/storage/remote/otlptranslator/prometheusremotewrite"
+package prometheusremotewrite // import "github.com/go-follow/prometheus/storage/remote/otlptranslator/prometheusremotewrite"
 
 import (
 	"errors"
 	"fmt"
 
-	"github.com/prometheus/prometheus/prompb"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/pmetric"
 	"go.uber.org/multierr"
 
-	prometheustranslator "github.com/prometheus/prometheus/storage/remote/otlptranslator/prometheus"
+	"github.com/go-follow/prometheus/prompb"
+
+	prometheustranslator "github.com/go-follow/prometheus/storage/remote/otlptranslator/prometheus"
 )
 
 type Settings struct {

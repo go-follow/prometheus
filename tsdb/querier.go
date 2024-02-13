@@ -24,15 +24,15 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/storage"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/prometheus/tsdb/errors"
-	"github.com/prometheus/prometheus/tsdb/index"
-	"github.com/prometheus/prometheus/tsdb/tombstones"
-	"github.com/prometheus/prometheus/util/annotations"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/storage"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	tsdb_errors "github.com/go-follow/prometheus/tsdb/errors"
+	"github.com/go-follow/prometheus/tsdb/index"
+	"github.com/go-follow/prometheus/tsdb/tombstones"
+	"github.com/go-follow/prometheus/util/annotations"
 )
 
 // Bitmap used by func isRegexMetaCharacter to check whether a character needs to be escaped.
@@ -347,8 +347,8 @@ func PostingsForMatchers(ctx context.Context, ix IndexReader, ms ...*labels.Matc
 		default: // l=""
 			// If the matchers for a labelname selects an empty value, it selects all
 			// the series which don't have the label name set too. See:
-			// https://github.com/prometheus/prometheus/issues/3575 and
-			// https://github.com/prometheus/prometheus/pull/3578#issuecomment-351653555
+			// https://github.com/go-follow/prometheus/issues/3575 and
+			// https://github.com/go-follow/prometheus/pull/3578#issuecomment-351653555
 			it, err := inversePostingsForMatcher(ctx, ix, m)
 			if err != nil {
 				return nil, err

@@ -18,7 +18,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/histogram"
 )
 
 type result struct {

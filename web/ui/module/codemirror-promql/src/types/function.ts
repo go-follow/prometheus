@@ -102,7 +102,7 @@ export interface PromQLFunction {
 }
 
 // promqlFunctions is a list of all functions supported by PromQL, including their types.
-// Based on https://github.com/prometheus/prometheus/blob/master/promql/parser/functions.go#L26
+// Based on https://github.com/go-follow/prometheus/blob/master/promql/parser/functions.go#L26
 const promqlFunctions: { [key: number]: PromQLFunction } = {
   [Abs]: {
     name: 'abs',

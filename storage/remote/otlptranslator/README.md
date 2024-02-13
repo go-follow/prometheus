@@ -12,7 +12,7 @@ To update the dependency is a multi-step process:
 
 ### Why copy?
 
-This is because the packages we copy depend on the [`prompb`](https://github.com/prometheus/prometheus/blob/main/prompb) package. While the package is relatively stable, there are still changes. For example, https://github.com/prometheus/prometheus/pull/11935 changed the types.
+This is because the packages we copy depend on the [`prompb`](https://github.com/go-follow/prometheus/blob/main/prompb) package. While the package is relatively stable, there are still changes. For example, https://github.com/go-follow/prometheus/pull/11935 changed the types.
 This means if we depend on the upstream packages directly, we will never able to make the changes like above. Hence we're copying the code for now.
 
 ### I need to manually change these files

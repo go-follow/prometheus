@@ -23,12 +23,12 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/prometheus/prometheus/model/histogram"
-	"github.com/prometheus/prometheus/model/labels"
-	"github.com/prometheus/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/prometheus/tsdb/errors"
-	"github.com/prometheus/prometheus/util/annotations"
+	"github.com/go-follow/prometheus/model/histogram"
+	"github.com/go-follow/prometheus/model/labels"
+	"github.com/go-follow/prometheus/tsdb/chunkenc"
+	"github.com/go-follow/prometheus/tsdb/chunks"
+	tsdb_errors "github.com/go-follow/prometheus/tsdb/errors"
+	"github.com/go-follow/prometheus/util/annotations"
 )
 
 type mergeGenericQuerier struct {
