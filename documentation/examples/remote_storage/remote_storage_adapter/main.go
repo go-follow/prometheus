@@ -37,8 +37,8 @@ import (
 	"github.com/prometheus/common/promlog"
 	"github.com/prometheus/common/promlog/flag"
 
-	"github.com/prometheus/prometheus/prompb"
-	"github.com/prometheus/prometheus/storage/remote"
+	"github.com/go-follow/prometheus/prompb"
+	"github.com/go-follow/prometheus/storage/remote"
 
 	"github.com/go-follow/prometheus/documentation/examples/remote_storage/remote_storage_adapter/graphite"
 	"github.com/go-follow/prometheus/documentation/examples/remote_storage/remote_storage_adapter/influxdb"
