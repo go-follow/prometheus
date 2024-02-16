@@ -98,6 +98,13 @@ type Config struct {
 	Action Action `yaml:"action,omitempty"`
 }
 
+func (c *Config) MarshalYAML() (interface{}, error) {
+	if c.Regex.Regexp == nil || c.Regex.String() == DefaultRelabelConfig.Regex.String() {
+		c.Regex.Regexp = nil
+	}
+	return c, nil
+}
+
 // UnmarshalYAML implements the yaml.Unmarshaler interface.
 func (c *Config) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	*c = DefaultRelabelConfig
@@ -131,7 +138,7 @@ func (c *Config) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	}
 
 	if c.Action == DropEqual || c.Action == KeepEqual {
-		if c.Regex.String() != DefaultRelabelConfig.Regex.String() ||
+		if c.Regex != DefaultRelabelConfig.Regex ||
 			c.Modulus != DefaultRelabelConfig.Modulus ||
 			c.Separator != DefaultRelabelConfig.Separator ||
 			c.Replacement != DefaultRelabelConfig.Replacement {
