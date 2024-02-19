@@ -28,7 +28,7 @@ func TestMarshalConfigYAML(t *testing.T) {
 	testCases := []struct {
 		name          string
 		inputCfg      *Config
-		unmarshalCfg  *Config
+		exceptedCfg   *Config
 		exceptedError error
 	}{
 		{
@@ -38,7 +38,7 @@ func TestMarshalConfigYAML(t *testing.T) {
 				TargetLabel:  "__meta_kubernetes_pod_container_port_number",
 				Action:       KeepEqual,
 			},
-			unmarshalCfg: &Config{
+			exceptedCfg: &Config{
 				SourceLabels: model.LabelNames{"__meta_kubernetes_pod_annotation_prometheus_io_port"},
 				Separator:    ";",
 				Regex:        MustNewRegexp("(.*)"),
@@ -56,7 +56,7 @@ func TestMarshalConfigYAML(t *testing.T) {
 				Regex:        MustNewRegexp("(.*)"),
 				Action:       KeepEqual,
 			},
-			unmarshalCfg: &Config{
+			exceptedCfg: &Config{
 				SourceLabels: model.LabelNames{"__meta_kubernetes_pod_annotation_prometheus_io_port"},
 				Separator:    ";",
 				Regex:        MustNewRegexp("(.*)"),
@@ -74,7 +74,7 @@ func TestMarshalConfigYAML(t *testing.T) {
 				Regex:        MustNewRegexp("some_regex"),
 				Action:       KeepEqual,
 			},
-			unmarshalCfg: &Config{
+			exceptedCfg: &Config{
 				SourceLabels: model.LabelNames{"__meta_kubernetes_pod_annotation_prometheus_io_port"},
 				Separator:    ";",
 				Regex:        MustNewRegexp("(.*)"),
@@ -90,10 +90,10 @@ func TestMarshalConfigYAML(t *testing.T) {
 			data, err := yaml.Marshal(tc.inputCfg)
 			require.NoError(t, err)
 
-			newCfg := Config{}
-			err = yaml.Unmarshal(data, &newCfg)
+			unmarshalCfg := Config{}
+			err = yaml.Unmarshal(data, &unmarshalCfg)
 			if err == nil {
-				require.Equal(t, tc.unmarshalCfg, &newCfg)
+				require.Equal(t, tc.exceptedCfg, &unmarshalCfg)
 			}
 			require.Equal(t, tc.exceptedError, err)
 		})
